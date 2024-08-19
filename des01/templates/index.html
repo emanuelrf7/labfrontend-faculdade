@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main-style.css') }}">
+    <style>
+        #apresentacao {
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.250) inset;
+        }
+
+        .container-foto-de-perfil {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid white;
+            background-image: url("{{ url_for('static', filename='fotodeperfil.jpg') }}");
+            background-position: center center;
+            background-size: cover;
+        }
+
+        @media only screen and (min-width: 568px) {
+            .cabecalho {
+                height: 100%;
+            }
+
+            #apresentacao {
+                background-image: url("{{ url_for('static', filename='background-grande.jpg') }}");       
+            }
+
+            .container-contato {
+                flex-direction: row;
+            }
+
+            .container-contato a {
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <p>Emanuel.</p>
+        <menu>
+            <ul>
+                <div class="container-menu-items">
+                    <a href="#apresentacao"><li>Home</li></a>
+                    <a href="#sobre"><li>Sobre mim</li></a>
+                    <a href="#skills"><li>Habilidades</li></a>
+                    <a href="#trabalhos"><li>Trabalhos</li></a>
+                    <a href="#contato"><li>Contato</li></a>
+                </div>
+            </ul>
+        </menu>
+    </header>
+    
+    <main>
+        <section id="apresentacao">
+            <div class="fundo-transparente">
+                <h1>Olá, eu sou o <strong>Emanuel</strong></h1>
+                <h2>Software Engineering Student</h2>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <div class="container-foto-de-perfil"></div>
+            <p>Emanuel Rosa Franco, mais conhecido como “manel”. Tenho 22 anos e atualmente estou cursando Engenharia de Software na <a href="https://univassouras.edu.br/">Universidade de Vassouras</a> e espero construir uma carreira sólida na área.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <div class="texto-img-centralizado">
+                <p>Atualmente desenvolvo em:</p>
+                <a href="https://pt.wikipedia.org/wiki/HTML5" rel="external" target="_blank"><abbr title="HTML5"><img src="{{ url_for('static', filename='logo-html5.png') }}" alt="Logo do HTML"></abbr></a>
+                <a href="https://pt.wikipedia.org/wiki/CSS3" rel="external" target="_blank"><abbr title="CSS3"><img src="{{ url_for('static', filename='logo-css3.png') }}" alt="Logo do CSS"></abbr></a>
+            </div>
+            <div class="texto-img-centralizado">
+                <p>Programo em:</p>
+                <a href="https://pt.wikipedia.org/wiki/JavaScript" rel="external" target="_blank"><abbr title="JavaScript"><img src="{{ url_for('static', filename='logo-js.png') }}" alt="Logo do JavaScript"></abbr></a> 
+            </div>
+            <div class="texto-img-centralizado">
+                <p>Estou estudando:</p> 
+                <a href="https://www.python.org/" rel="external" target="_blank"><abbr title="Python"><img src="{{ url_for('static', filename='logo-python.png') }}" alt="Logo do Python"></abbr></a>
+            </div>
+            <div class="texto-img-centralizado">
+                <p>Tenho conhecimento de inglês nível intermediário e faço uso das ferramentas:</p> 
+                <a href="https://code.visualstudio.com/" rel="external" target="_blank"><abbr title="Visual Studio Code"><img src="{{ url_for('static', filename='logo-vscode.png') }}" alt="Logo do VSCODE"></abbr></a> 
+                <a href="https://git-scm.com/" rel="external" target="_blank"><abbr title="Git"><img src="{{ url_for('static', filename='logo-git.png') }}" alt="Logo do Git"></abbr></a> 
+                <a href="https://desktop.github.com/" rel="external" target="_blank"><abbr title="GitHub Desktop"><img src="{{ url_for('static', filename='logo-github-desktop.png') }}" alt="Logo do GitHub Desktop"></abbr></a> 
+                <a href="https://www.figma.com/" rel="external" target="_blank"><abbr title="Figma"><img src="{{ url_for('static', filename='logo-figma.png') }}" alt="Logo do Figma"></abbr></a>
+            </div>
+        </section>
+
+        <section id="trabalhos">
+            <div class="container-texto-trabalhos">
+                <h2>Trabalhos</h2>
+                <p>Clique no botão para conferir meus trabalhos em HTML!</p>
+            </div>
+            <a href="trabalhos.html"><div class="botao">Clique Aqui</div></a>
+        </section>
+
+        <section id="contato">
+            <div class="container-texto-contato">
+                <h2>Contato</h2>
+                <p>Me contate através das minhas redes sociais!</p>
+            </div>
+            <div class="container-contato">
+                <a href="https://wa.me/5524998366668?text=" rel="external" target="_blank"><img src="{{ url_for('static', filename='logo-whatsapp.png') }}" alt="Logo do WhatsApp"></a>
+                <a href="https://www.instagram.com/emanuelrf7/" rel="external" target="_blank"><img src="{{ url_for('static', filename='logo-instagram.png') }}" alt="Logo do Instagram"></a>
+                <a href="https://twitter.com/emanuelrf7" rel="external" target="_blank"><img src="{{ url_for('static', filename='logo-x.png') }}" alt="Logo do X"></a>
+                <a href="https://www.linkedin.com/in/emanuelrosafranco/" rel="external" target="_blank"><img src="{{ url_for('static', filename='logo-linkedin.png') }}" alt="Logo do Linkedin"></a>
+                <a href="https://github.com/emanuelrf7" rel="external" target="_blank"><img src="{{ url_for('static', filename='logo-github.png') }}" alt="Logo do GitHub"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>® DESENVOLVIDO POR <strong>EMANUEL ROSA FRANCO</strong></p>
+    </footer>
+</body>
+</html>
