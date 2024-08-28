@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio da Cantina</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> </head>
+<body>
+    <h1>Cardápio da Cantina</h1>
+
+    <h2>Sanduíches</h2>
+    <ul>
+        <div class="container">
+            <li>
+                <h3>Sanduíche Natural</h3>
+                <div class="container-img">
+                    <img src="{{ url_for('static', filename='sanduiche_natural.jpg')}}" alt="Sanduíche Natural">
+                </div>
+                <div class="botao">
+                    <a href="sand-natural-detalhado.html">Saiba Mais</a>
+                </div>
+            </li>
+            <li>
+                <h3>Coxinha</h3>
+                <div class="container-img">
+                    <img src="{{ url_for('static', filename='coxinha.jpg')}}" alt="Sanduíche Natural">
+                </div>
+                <div class="botao">
+                    <a href="coxinha-detalhado.html">Saiba Mais</a>
+                </div>
+            </li>
+            <li>
+                <h3>Empadão</h3>
+                <div class="container-img">
+                    <img src="{{ url_for('static', filename='empadao.jpg')}}" alt="Sanduíche Natural">
+                </div>
+                <div class="botao">
+                    <a href="empadao-detalhado.html">Saiba Mais</a>
+                </div>
+            </li>
+        </div>
+    </ul>
+
+    </body>
+</html>
