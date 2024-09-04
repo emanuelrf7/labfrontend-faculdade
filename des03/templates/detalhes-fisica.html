@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Conferência</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='detalhes.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Detalhes da Conferência</h1>
+    </header>
+    <div class="container">
+        <div class="conference-info">
+            <h2>Informações da Conferência</h2>
+            <p><strong>Título:</strong> Conferência Internacional de Física</p>
+            <p><strong>Tema:</strong> Física Quântica</p>
+            <p><strong>Data:</strong> 10/10/2024</p>
+            <p><strong>Local:</strong> Centro de Convenções de São Paulo</p>
+            <p><strong>Organizadores:</strong> Universidade de São Paulo</p>
+            <p><strong>Regras:</strong> Todos os participantes devem se registrar com antecedência.</p>
+            <p><strong>Prêmios:</strong> Melhor Artigo, Melhor Palestrante</p>
+        </div>
+        
+        <div class="speakers">
+            <h2>Palestrantes</h2>
+            <div class="speaker">
+                <img src="https://img.freepik.com/fotos-gratis/retrato-de-homem-feliz-e-sorridente_23-2149022620.jpg" alt="Foto do Palestrante 1">
+                <div class="speaker-info">
+                    <p><strong>Nome:</strong> Dr. João Silva</p>
+                    <p><strong>Biografia:</strong> Especialista em Física Quântica com mais de 20 anos de experiência na área.</p>
+                </div>
+            </div>
+            <div class="speaker">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTwcDKNEeRMNkDDy9lf1XUjZ2DtlHPiGWzlw&s" alt="Foto do Palestrante 2">
+                <div class="speaker-info">
+                    <p><strong>Nome:</strong> Dra. Maria Oliveira</p>
+                    <p><strong>Biografia:</strong> Pesquisadora líder em Experimentos de Física de Partículas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="submitted-papers">
+            <h2>Artigos Submetidos</h2>
+            <div class="paper">
+                <p><strong>Título:</strong> Avanços na Física Quântica</p>
+                <p><strong>Resumo:</strong> Este artigo explora os mais recentes avanços na teoria da física quântica...</p>
+                <a href="artigo-avancos.html" class="btn">Ver Detalhes</a>
+            </div>
+            <div class="paper">
+                <p><strong>Título:</strong> Aplicações da Física de Partículas</p>
+                <p><strong>Resumo:</strong> Uma análise das novas aplicações práticas da física de partículas em tecnologias emergentes...</p>
+                <a href="artigo-aplicacoes.html" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <a href="/" class="btn">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

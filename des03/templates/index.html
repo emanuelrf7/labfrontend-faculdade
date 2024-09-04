@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Conferências Científicas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pagina-principal.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gestão de Conferências Científicas</h1>
+    </header>
+    <div class="container">
+        <h2>Listagem de Conferências</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Tema</th>
+                    <th>Data</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Conferência Internacional de Física</td>
+                    <td>Física Quântica</td>
+                    <td>10/10/2024</td>
+                    <td><a href="detalhes-fisica.html" class="btn">Ver Detalhes</a></td>
+                </tr>
+                <tr>
+                    <td>Simpósio de Biologia Molecular</td>
+                    <td>Genética e Biotecnologia</td>
+                    <td>22/11/2024</td>
+                    <td><a href="detalhes-biologia.html" class="btn">Ver Detalhes</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

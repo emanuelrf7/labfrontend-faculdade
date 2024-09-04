@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Conferência</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='detalhes.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Detalhes da Conferência</h1>
+    </header>
+    <div class="container">
+        <div class="conference-info">
+            <h2>Informações da Conferência</h2>
+            <p><strong>Título:</strong> Simpósio de Biologia Molecular</p>
+            <p><strong>Tema:</strong> Genética e Biotecnologia</p>
+            <p><strong>Data:</strong> 22/11/2024</p>
+            <p><strong>Local:</strong> Auditório da Universidade Federal do Rio de Janeiro</p>
+            <p><strong>Organizadores:</strong> Universidade Federal do Rio de Janeiro</p>
+            <p><strong>Regras:</strong> Inscrições abertas até 01/11/2024. Todos os participantes devem submeter um resumo antes da data limite.</p>
+            <p><strong>Prêmios:</strong> Melhor Pesquisa, Melhor Apresentação de Pôster</p>
+        </div>
+        
+        <div class="speakers">
+            <h2>Palestrantes</h2>
+            <div class="speaker">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS019jHGCQ4kvMPVLmaDsY43nKoTO1-HPbrBA&s" alt="Foto do Palestrante 3">
+                <div class="speaker-info">
+                    <p><strong>Nome:</strong> Prof. Ana Costa</p>
+                    <p><strong>Biografia:</strong> Especialista em Biotecnologia com foco em aplicações terapêuticas.</p>
+                </div>
+            </div>
+            <div class="speaker">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc23ymOjEfmy5kCaX0rn47s9CjaM0bMDOo-A&s" alt="Foto do Palestrante 4">
+                <div class="speaker-info">
+                    <p><strong>Nome:</strong> Dr. Pedro Lima</p>
+                    <p><strong>Biografia:</strong> Pesquisador em Genética Molecular, com ênfase em genética de populações.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="submitted-papers">
+            <h2>Artigos Submetidos</h2>
+
+            <div class="paper">
+                <p><strong>Título:</strong> Avanços na Terapia Gênica</p>
+                <p><strong>Resumo:</strong> Este artigo explora as últimas inovações em terapia gênica para tratamento de doenças raras...</p>
+                <a href="artigo-terapia.html" class="btn">Ver Detalhes</a>
+            </div>
+            <div class="paper">
+                <p><strong>Título:</strong> Biotecnologia no Diagnóstico Molecular</p>
+                <p><strong>Resumo:</strong> Análise das novas tecnologias de diagnóstico molecular e suas aplicações na prática clínica...</p>
+                <a href="artigo-biotecnologia.html" class="btn">Ver Detalhes</a>
+            </div>
+
+        </div>
+        <a href="/" class="btn">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>
