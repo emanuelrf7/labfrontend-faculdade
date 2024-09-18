@@ -12,6 +12,7 @@
     </header>
     <div class="container">
         <h2>Listagem de Conferências</h2>
+        {% for conferencia in conferencia_list %}
         <table>
             <thead>
                 <tr>
@@ -22,20 +23,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Conferência Internacional de Física</td>
-                    <td>Física Quântica</td>
-                    <td>10/10/2024</td>
-                    <td><a href="detalhes-fisica.html" class="btn">Ver Detalhes</a></td>
-                </tr>
-                <tr>
-                    <td>Simpósio de Biologia Molecular</td>
-                    <td>Genética e Biotecnologia</td>
-                    <td>22/11/2024</td>
-                    <td><a href="detalhes-biologia.html" class="btn">Ver Detalhes</a></td>
+                <tr class="{{conferencia.get_id()}}">
+                    <td>{{ conferencia.get_title() }}</td>
+                    <td>{{ conferencia.get_theme() }}</td>
+                    <td>{{ conferencia.get_date()}}</td>
+                    <td><a href="{{conferencia.get_details()}}" class="btn">Ver Detalhes</a></td>
                 </tr>
             </tbody>
         </table>
+        {% endfor %}
     </div>
 </body>
 </html>

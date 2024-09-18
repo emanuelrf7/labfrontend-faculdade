@@ -24,20 +24,15 @@
         
         <div class="speakers">
             <h2>Palestrantes</h2>
-            <div class="speaker">
-                <img src="https://img.freepik.com/fotos-gratis/retrato-de-homem-feliz-e-sorridente_23-2149022620.jpg" alt="Foto do Palestrante 1">
-                <div class="speaker-info">
-                    <p><strong>Nome:</strong> Dr. João Silva</p>
-                    <p><strong>Biografia:</strong> Especialista em Física Quântica com mais de 20 anos de experiência na área.</p>
+            {% for palestrante in palestrantes_fisica_list %}
+                <div class="speaker" class="{{palestrante.get_id()}}">
+                    <img src="{{palestrante.get_img()}}">
+                    <div class="speaker-info">
+                        <p><strong>Nome:</strong> {{ palestrante.get_name() }}</p>
+                        <p><strong>Biografia:</strong> {{ palestrante.get_biografy() }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="speaker">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTwcDKNEeRMNkDDy9lf1XUjZ2DtlHPiGWzlw&s" alt="Foto do Palestrante 2">
-                <div class="speaker-info">
-                    <p><strong>Nome:</strong> Dra. Maria Oliveira</p>
-                    <p><strong>Biografia:</strong> Pesquisadora líder em Experimentos de Física de Partículas.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <div class="submitted-papers">
@@ -45,12 +40,12 @@
             <div class="paper">
                 <p><strong>Título:</strong> Avanços na Física Quântica</p>
                 <p><strong>Resumo:</strong> Este artigo explora os mais recentes avanços na teoria da física quântica...</p>
-                <a href="artigo-avancos.html" class="btn">Ver Detalhes</a>
+                <a href="/artigo-avancos" class="btn">Ver Detalhes</a>
             </div>
             <div class="paper">
                 <p><strong>Título:</strong> Aplicações da Física de Partículas</p>
                 <p><strong>Resumo:</strong> Uma análise das novas aplicações práticas da física de partículas em tecnologias emergentes...</p>
-                <a href="artigo-aplicacoes.html" class="btn">Ver Detalhes</a>
+                <a href="/artigo-aplicacoes" class="btn">Ver Detalhes</a>
             </div>
         </div>
         <a href="/" class="btn">Voltar para a Página Inicial</a>
